@@ -1,0 +1,89 @@
+body {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-top: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+img {
+    width: 218px;
+    height: 90px;
+    object-fit: contain;
+
+}
+
+.col-6 {
+    width: 40%;
+    margin: 20px 45px;
+}
+
+.row {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+h1.title {
+    text-align: center;
+    color: #FFCE1B;
+    font-size: 50px;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 1249px) and (max-width:1329px) {
+    .col-6 {
+        width: 39%;
+    }
+}
+
+@media screen and (min-width: 889px) and (max-width:1248px) {
+    .col-6 {
+        width: 39%;
+    }
+    .container {
+        padding: 0 15px;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (min-width: 586px) and (max-width:888px) {
+    .col-6 {
+        width: 39%;
+        margin: 16px 30px;
+    }
+    .container {
+        padding: 0 15px;
+        margin: 0 5px;
+    }
+}
+
+@media screen and (min-width: 542px) and (max-width:585px) {
+    .col-6 {
+        width: 39%;
+        margin: 14px 10px;
+    }
+    .container {
+        padding: 0 5px;
+        margin: 0 1px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width:541px) {
+    .col-6 {
+        width: 100%;
+        margin: 14px 10px;
+    }
+    .container {
+        padding: 0 5px;
+        margin: 0 1px;
+    }
+}

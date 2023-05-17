@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap {
+    padding: 20px;
+}
+
+.formLogin {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    border-radius: 15px;
+    overflow: hidden;
+    transform: translateY(-120%);
+    transition: .5s;
+}
+
+.formChangeP {
+    position: relative;
+    margin-top: 50px;
+    width: 400px;
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header {
+    margin: 40px;
+    text-align: center; 
+}
+
+.formLogin__box,
+.formChangeP__box {
+    display: flex;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.warning__nameInput,
+.warning__passInput,
+.warning__checkPass {
+    display: block;
+    text-align: start;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.warning__submitPass {
+    display: block;
+    text-align: start;
+    color: greenyellow;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.formLogin__icon {
+    margin-right: 5px;
+    opacity: 70%;
+}
+
+.formLogin__box input,
+.formChangeP__box input {
+    width: 100%;
+    font-size: 18px;
+    border-style: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.formLogin__btnLogin,
+.formChangeP__btnSubmit {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(46, 220, 46);
+    border-style: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.formLogin a,
+.formChangeP a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #e2dede;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn__login {
+    position: fixed;
+    padding: 10px;
+    border-style: none;
+    background-color: #2196f3;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

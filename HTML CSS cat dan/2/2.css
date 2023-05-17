@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color--EAEAEA: #EAEAEA;
+}
+
+.backGround {
+    background-image: url("../pics/bai2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    color: #fff;
+    /* filter: brightness(30%); */
+    display: flex;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    backdrop-filter: brightness(23%);
+    text-align: center;
+}
+
+h2.container__title {
+    font-size: 27px;
+    font-weight: 300;
+    margin: 10px;
+    color: var(--color--EAEAEA);
+}
+
+p.container__des {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 20px;
+    color: var(--color--EAEAEA);
+}
+
+button.container__btn {
+    padding: 14px;
+    color: var(--color--EAEAEA);
+    background-image: linear-gradient(rgb(229,86,63), rgb(216,63,45));
+    border: 0;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: 40px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+
+button.container__btn:hover {
+    background-image: linear-gradient(rgb(231, 101, 81), rgb(219, 52, 33));
+}
+
+@media screen and (min-width: 427px) and (max-width:598px) {
+    .backGround {
+        height: 296px;
+    }
+    h2.container__title {
+        font-size: 20px;
+        margin: 3px;
+    }
+    p.container__des {
+        font-size: 13px;
+        margin: 15px;
+    }
+    button.container__btn {
+        font-size: 14px;
+        margin: 22px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width:426px) {
+    .backGround {
+        height: 296px;
+    }
+    h2.container__title {
+        font-size: 15px;
+        margin: 3px;
+    }
+    p.container__des {
+        font-size: 10px;
+        margin: 15px;
+    }
+    button.container__btn {
+        font-size: 10px;
+        margin: 14px;
+    }
+}

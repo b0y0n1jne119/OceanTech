@@ -1,0 +1,131 @@
+body {
+    width: 100%;
+    background-color: #F6F6F6;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.breakline {
+    background-color: blue;
+    margin-bottom: 60px;
+    width: 91px;
+    height: 5px;
+}
+
+.evaluate_title {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.col-3 {
+    width: 26%;
+    display: flex;
+    justify-content: center;
+}
+
+.col-4 {
+    width: 30%;
+}
+
+.col-9 {
+    width: 74%;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.users {
+    font-size: 50px;
+    color: white;
+    background-color: #93DEA4;
+    border-radius: 56px;
+    height: 66px;
+    text-align: center;
+    width: 62px;
+    margin-top: 17px;
+}
+
+p.comments {
+    font-style: italic;
+    padding-right: 33px;
+    font-size: 18px;
+}
+
+p.author {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width:1013px) {
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .col-4 {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:481px) {
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .col-4 {
+        width: 45%;
+    }
+    p.comments {
+        padding-right: 10px;
+    }
+    .col-3 {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 220px) and (max-width:441px) {
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    p.comments {
+        padding-right: 10px;
+    }
+    .col-3 {
+        width: 50%;
+    }
+    h1 {
+        font-size: 35px;
+    }
+}

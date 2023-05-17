@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>BT 3</title>
+</head>
+
+<body>
+
+    <button onclick="btnLogin()" class="btn__login">Đăng nhập hệ thống</button>
+
+    <form class="formLogin" action="#">
+        <div class="wrap">
+            <span onclick="handleClose()" class="close"><i class="fa-solid fa-xmark"></i></span>
+            <h1 class="header">MEMBER LOGIn</h1>
+            <div class="formLogin__box">
+                <span class="formLogin__icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="formLogin__nameInput" name="username" id="username" placeholder="Username" />
+            </div>
+            <span class="warning__nameInput hide"></span>
+
+            <div class="formLogin__box">
+                <span class="formLogin__icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" class="formLogin__passInput" name="password" id="password"
+                    placeholder="Password">
+            </div>
+            <span class="warning__passInput"></span>
+            <button class="formLogin__btnLogin" type="button" onclick="handleSubmit()">Login</button>
+        </div>
+        <a href="#" onclick="openFormChangePass()" class="change__password">Forgot Password?</a>
+    </form>
+
+
+    <form action="#" class="formChangeP hide">
+        <div class="wrap">
+            <h1 class="header">CHANGE YOUR PASSWORD</h1>
+            <div class="formChangeP__box">
+                <input type="text" class="formChangeP__oldPass" name="password-old" id="password-old"
+                    placeholder="Old Password">
+            </div>
+            <div class="formChangeP__box">
+                <input type="password" class="formChangeP__newPass" placeholder="New Password">
+            </div>
+            <span class="warning__checkPass hide"></span>
+            <button class="formChangeP__btnSubmit" type="button" onclick="handleSaveNewPass()">Save</button>
+            <span class="warning__submitPass hide"></span>
+        </div>
+        <a href="#" class="change__backLogin" onclick="btnBackToLogin()">Back To Login?</a>
+    </form>
+
+    <script src="./3.js"></script>
+</body>
+
+</html>
