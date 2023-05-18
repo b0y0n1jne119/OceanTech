@@ -5,10 +5,11 @@
     4. Fetch
         - JSON server: API server (FAKE) / Mock
         - CRUD
-            - Create: Tạo mới
-            - Read: Lấy dữ liệu
-            - Update: Chỉnh sửa
-            - Delete: Xóa
+            - Create: Tạo mới -> POST
+            - Read: Lấy dữ liệu -> GET
+            - Update: Chỉnh sửa -> PUT / PATCH
+            - Delete: Xóa -> DELETE
+        -Postman
 
 */
 
