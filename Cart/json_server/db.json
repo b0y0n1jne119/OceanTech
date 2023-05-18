@@ -1,0 +1,25 @@
+{
+    "carts": [
+        {
+            "id": 1,
+            "name": "Nike Air Force one '01",
+            "price": 100,
+            "quantity": 8,
+            "imgURL": "../img/sp1.png"
+        },
+        {
+            "id": 2,
+            "name": "Nike Air Force Max 02",
+            "price": 200,
+            "quantity": 3,
+            "imgURL": "../img/sp2.png"
+        },
+        {
+            "id": 3,
+            "name": "Nike Air Force Max 02",
+            "price": 300,
+            "quantity": 8,
+            "imgURL": "../img/sp3.png"
+        }
+    ]
+}
