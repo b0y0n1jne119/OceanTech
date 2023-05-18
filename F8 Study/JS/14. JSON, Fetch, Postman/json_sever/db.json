@@ -9,6 +9,11 @@
       "name": "Xây dựng website với NodeJS 2",
       "description": "Node.js là một hệ thống phần mềm được thiết kế để viết các ứng dụng internet có khả năng mở rộng, đặc biệt là máy chủ web. Chương trình được viết bằng JavaScript, sử dụng kỹ thuật điều khiển theo sự kiện, nhập/xuất không đồng bộ để tối thiểu tổng chi phí và tối đa khả năng mở rộng.",
       "id": 2
+    },
+    {
+      "name": "HTML, CSS tips",
+      "description": "Turns out there are several ways to go about styling a React application. Some overlap with traditional styling, others not so much. But let’s count all the ways we can do it.",
+      "id": 3
     }
   ]
 }
