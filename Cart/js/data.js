@@ -36,5 +36,5 @@ const listData = [
     },
 ]
 
-var keyLocalStorageListSP = "DANHSACHSP"
-var keyLocalStorageItemCart = "DANHSACHITEMCART"
+let keyLocalStorageListSP = "DANHSACHSP"
+let keyLocalStorageItemCart = "DANHSACHITEMCART"

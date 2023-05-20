@@ -5,7 +5,7 @@
             "name": "Nike Air Force one '01",
             "price": 100,
             "quantity": 8,
-            "imgURL": "../img/sp1.png"
+            "imgURL": "../"
         },
         {
             "id": 2,

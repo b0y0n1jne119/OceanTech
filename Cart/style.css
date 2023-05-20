@@ -1,104 +1,284 @@
 * {
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    user-select: none;
-    line-height: normal;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-tr {
-    border-bottom: 1px solid #6e6969a6;
+.main {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-input,
-select,
-textarea {
-    outline: none;
-    border: 1px solid #6e6969a6;
-    padding: 8px 13px !important;
-    border-radius: 3px;
-
-}
-
-/* select{
-    max-width: 80%;
-} */
-label {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-p {
-    font-size: 18px;
-    margin: 0
-}
-
-.scroll-none {
-    overflow: hidden;
-}
-
-img {
-    object-fit: cover;
-    background-repeat: no-repeat
-}
-
-.header {
+.nav {
+    position: relative;
+    height: 46px;
     width: 100%;
-    height: 80px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-around;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 3px 10px #ccc;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    position: fixed;
-    top: 0;
-    z-index: 11;
+    justify-content: space-between;
 }
 
-.content,
-.caret {
-    pointer-events: none;
+.nav a {
+    color: black;
+    text-decoration: none;
 }
 
-.hide {
-    display: none !important
-}
-
-.modal {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    left: 0;
+.nav .logo {
     display: flex;
+}
+
+.logo-img img {
+    position: relative;
+    height: 23px;
+}
+
+ul.nav-list {
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+
+li.nav-title {
+    padding: 5%;
+    text-transform: uppercase;
+}
+li.nav-title i {
+    cursor: pointer;
+}
+li.nav-title i:hover {
+    color:orange;
+}
+
+.show-item-cart {
+    color: white;
+    background-color: orangered;
+    border-radius: 50%;
+    height: max-content;
+    font-size: xx-small;
+    padding: 0px 4px;
+    position: absolute;
+    right: -6px;
+}
+
+.item-pic {
+    width:100%;
+    position: relative;
+    border-radius: 5px;
+}
+.pic {
+    position: relative;
+}
+.item i {
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    font-size: 25px;
+    padding:7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.item i:hover {
+    color:orange;
+    border: 1px solid orange;
+}
+.item i:active {
+    color:green;
+    border: 1px solid green;
+}
+.warper {
+    margin: 20px 10px;
+    background-color: #ccc;
+    box-shadow: 1px 1px 10px;
+    padding: 0 2px;
+    border-radius: 5px;
+}
+.warper h4 {
+    text-align: center;
+}
+.item-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.list-cart-header {
+    text-align: center;
     align-items: center;
-    justify-content: center;
-    background-color: #6e6969a6;
-    overflow: auto;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+.list-cart {
+    text-align: center;
+    align-items: center;
+    padding: 1% 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.list-cart img {
+    width:60%;
+}
+
+.col-4 {
+    text-align: left;
+}
+
+.item-cart {
+    margin-top: 1%;
+    display: block;
+}
+
+.empty-cart {
+    display: none;
+}
+
+.background-img {
+    background-image: url('http://hsnbazar.com/images/empty-cart.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height:400px;
+}
+
+.footder {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.back-button {
+    color: #dc3545;
+    border:1px solid #dc3545;
+    border-radius: 7px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.back-button a {
+    color: #dc3545;
+    text-decoration: none;
+}
+.buy-button {
+    color:#fff;
+    background-color: #198754;
+    border-radius: 7px;
+    padding: 5px 15px;
     cursor: pointer;
 }
 
-.error {
-    color: red;
-    font-size: 14px;
+.total {
+    text-align: right;
 }
 
-@media only screen and (max-width: 1340px) {
+.clear-item-cart {
+    color: #dc3545;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.quantity-adjust {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.quantity-adjust >i {
+    font-size: 1.5rem;
+    opacity: 0.3;
+    cursor: pointer;
+}
 
-    input,
-    select,
-    textareta {
-        width: 100%;
-    }
+.buy-popup {
+    position: absolute;
+    display:none;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #21252998;
+}
 
-    .input-name {
-        flex-direction: column;
-    }
+.popup-main {
+    margin: auto auto;
+    position:relative;
+    top:2rem;
+    width:60%;
+    background-color: #fff;
+    border-radius: 7px;
+    padding:1rem;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.popup-footder {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1px solid #ccc;
+}
+.btn {
+    margin: 1rem 1rem 0 0;
+}
+textarea {
+    width:100%;
+    height:100px;
+    border-radius: 7px;
+}
+
+.popup-body input {
+    margin-bottom: 0.5rem;
+}
+
+sup {
+    color:red;
+}
+.noteFirstName, 
+.noteLastName, 
+.noteEmail, 
+.notePhoneNumber, 
+.noteAddress,
+.noteProvince,
+.noteDistrict,
+.noteWard {
+    color:red;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.list-bills-header {
+    padding-top:2%;
+    font-weight: bold;
+}
+.list-bills-render {
+    border-top:1px solid #ccc;
+    padding: 1% 0;
+}
+.list-bills-render i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #dc3545;
+}
+
+.detail-content {
+    display: none;
+    background-color: rgb(246, 253, 255);
+    margin-bottom: 5px;
+}
+.detail-button {
+    color:blue;
+    font-size: small;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.bill-detail-header {
+    font-weight:bold;
 }
