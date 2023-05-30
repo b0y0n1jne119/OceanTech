@@ -67,15 +67,12 @@ button.container__btn:hover {
         height: 296px;
     }
     h2.container__title {
-        font-size: 20px;
         margin: 3px;
     }
     p.container__des {
-        font-size: 13px;
         margin: 15px;
     }
     button.container__btn {
-        font-size: 14px;
         margin: 22px;
     }
 }
@@ -85,15 +82,12 @@ button.container__btn:hover {
         height: 296px;
     }
     h2.container__title {
-        font-size: 15px;
         margin: 3px;
     }
-    p.container__des {
-        font-size: 10px;
+    p.container__des {  
         margin: 15px;
     }
     button.container__btn {
-        font-size: 10px;
         margin: 14px;
     }
 }

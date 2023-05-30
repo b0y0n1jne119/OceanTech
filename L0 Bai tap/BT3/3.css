@@ -80,7 +80,7 @@ body {
 }
 
 .formLogin__icon {
-    margin-right: 5px;
+    margin: 3px 5px 0 6px;
     opacity: 70%;
 }
 
@@ -98,9 +98,9 @@ body {
     width: 100%;
     padding: 10px;
     color: #fff;
-    background-color: rgb(46, 220, 46);
+    background-color: #64CE82;
     border-style: none;
-    border-radius: 10px;
+    border-radius: 3px;
     font-size: 18px;
     cursor: pointer;
 }

@@ -64,13 +64,6 @@ p {
     .col-3 {
         width: 100px;
     }
-    p {
-        font-size: 11px;
-    }
-    
-    h1 {
-        font-size: 27px;
-    }    
 }
 
 @media screen and (min-width: 200px) and (max-width:499px) {
@@ -78,12 +71,7 @@ p {
         width: 50%;
         margin-bottom: 20px;
     }
-    p {
-        font-size: 11px;
-    }
-    
     h1 {
-        font-size: 27px;
         margin-bottom: 13px;
         margin-top: 13px;
     }
@@ -95,13 +83,6 @@ p {
 @media screen and (min-width: 50px) and (max-width:300px) {
     .col-3 {
         width: 100%;
-    }
-    p {
-        font-size: 11px;
-    }
-    
-    h1 {
-        font-size: 27px;
     }
     img {
         height: 547px;

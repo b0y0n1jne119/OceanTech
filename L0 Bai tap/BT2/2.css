@@ -9,19 +9,23 @@ ul {
     flex-wrap: wrap;
 }
 
-.odd {
+li {
+    list-style-type: none;
+}
+
+li:nth-child(odd), span:nth-child(odd) {
     width: 100px;
     height: 100px;
     background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.even {
+li:nth-child(even), span:nth-child(even) {
     width: 100px;
     height: 100px;
     background: green;
-}
-
-.odd, .even{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,13 +43,12 @@ span {
 }
 
 @media screen and (min-width:993px) and (max-width:1200px){
-    .odd {
+    li:nth-child(odd), span:nth-child(odd) {
         width: 50px;
         height: 100px;
         background: purple;
     }
-
-    .even {
+    li:nth-child(even), span:nth-child(even) {
         width: 100px;
         height: 100px;
         background: pink;
@@ -53,13 +56,12 @@ span {
 }
 
 @media screen and (min-width:769px) and (max-width:992px){
-    .odd {
+    li:nth-child(odd), span:nth-child(odd) {
         width: 30px;
         height: 100px;
         background: yellow;
     }
-
-    .even {
+    li:nth-child(even), span:nth-child(even) {
         width: 40px;
         height: 100px;
         background: purple;
@@ -68,13 +70,12 @@ span {
 
 
 @media screen and (min-width:426px) and (max-width:768px){
-    .odd {
+    li:nth-child(odd), span:nth-child(odd) {
         width: 30px;
         height: 100px;
         background: brown blue;
     }
-
-    .even {
+    li:nth-child(even), span:nth-child(even) {
         width: 40px;
         height: 100px;
         background: yellow;
@@ -82,13 +83,12 @@ span {
 }
 
 @media screen and (min-width:321px) and (max-width:425px){
-    .odd {
+    li:nth-child(odd), span:nth-child(odd) {
         width: 20px;
         height: 100px;
         background: yellow;
     }
-
-    .even {
+    li:nth-child(even), span:nth-child(even) {
         width: 50px;
         height: 100px;
         background: red;
@@ -96,13 +96,12 @@ span {
 }
 
 @media screen and (min-width:200px) and (max-width:320px){
-    .odd {
+    li:nth-child(odd), span:nth-child(odd) {
         width: 20px;
         height: 100px;
         background: red;
     }
-
-    .even {
+    li:nth-child(even), span:nth-child(even) {
         width: 30px;
         height: 100px;
         background: green;

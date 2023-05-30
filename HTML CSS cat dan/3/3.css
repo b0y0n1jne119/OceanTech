@@ -32,7 +32,7 @@ i.fa-regular.fa-envelope {
     color: var(--color--60C2CC);
     padding: 20px;
     border: 1px solid var(--color--60C2CC);
-    border-radius: 31px;
+    border-radius: 58px;
     margin: 10px;
     font-size: 25px;
 }
@@ -92,15 +92,6 @@ button.form__box--button {
     }
     .form__box input {
         width: 100%;
-    }
-    h1.detail__title {
-        font-size: 30px;
-    }
-    p.detail__des {
-        font-size: 15px;
-    }
-    .form__box input {
-        font-size: 10px;
     }
     button.form__box--button {
         font-size: 10px;

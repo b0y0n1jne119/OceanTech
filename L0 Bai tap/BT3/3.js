@@ -26,11 +26,12 @@ const handleClose = () => {
     $('.btn__login').classList.remove('hide')
 }
 
+
 const handleSubmit = () => {
     submitLogin.innerText = "Loading ..."
     if (
-        pass.value.trim() === '' ||
-        user.value.trim() === ''
+        !pass.value.trim() ||
+        !user.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
@@ -43,7 +44,7 @@ const handleSubmit = () => {
     ) {
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
-            $('.warning__passInput').innerText = "Tên người dùng or mật khẩu không chính xác!"
+            $('.warning__passInput').innerText = "Tên người dùng hoặc mật khẩu không chính xác!"
             submitLogin.innerText = 'Login'
         }, 1000)
     } else if (
@@ -80,8 +81,8 @@ const openFormChangePass = () => {
 const handleSaveNewPass = () => {
     submitChangePass.innerText = 'Save ...'
     if (
-        passOld.value.trim() === '' &&
-        passNew.value.trim() === ''
+        !passOld.value.trim() &&
+        !passNew.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
@@ -89,7 +90,7 @@ const handleSaveNewPass = () => {
             submitChangePass.innerText = `Save`
         }, 1000)
     } else if (
-        passOld.value.trim() === ''
+        !passOld.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
@@ -99,7 +100,7 @@ const handleSaveNewPass = () => {
             submitChangePass.innerText = `Save`
         }, 1000)
     } else if (
-        passNew.value.trim() === ''
+        !passNew.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
