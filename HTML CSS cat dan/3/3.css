@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding : 0;
+    margin  : 0;
 }
 
 html {
@@ -12,42 +12,42 @@ html {
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
+    width           : 100%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 100vh;
+    flex-direction  : column;
+    text-align      : center;
     background-color: #F2F2F2;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
 }
 
 i.fa-regular.fa-envelope {
-    color: var(--color--60C2CC);
-    padding: 20px;
-    border: 1px solid var(--color--60C2CC);
-    border-radius: 58px;
-    margin: 10px;
-    font-size: 25px;
+    color           : var(--color--60C2CC);
+    padding         : 20px;
+    border          : 1px solid var(--color--60C2CC);
+    border-radius   : 58px;
+    margin          : 10px;
+    font-size       : 25px;
 }
 
 h1.detail__title {
-    font-size: 50px;
-    font-weight: 700;
-    margin: 10px;
-    color: #201C1D;
+    font-size   : 50px;
+    font-weight : 700;
+    margin      : 10px;
+    color       : #201C1D;
 }
 
 p.detail__des {
-    font-size: 21px;
-    color: #939292;
-    margin: 10px;
+    font-size   : 21px;
+    color       : #939292;
+    margin      : 10px;
 }
 
 .form__box {
@@ -55,13 +55,14 @@ p.detail__des {
 }
 
 .form__box input {
-    width: 443px;
-    font-size: 18px;
+    width       : 443px;
+    height      : 62px;
+    font-size   : 18px;
     border-style: none;
-    outline: none;
-    padding: 10px;
-    color: #A9A9A9;
-    box-sizing: border-box;
+    outline     : none;
+    padding     : 10px;
+    color       : #A9A9A9;
+    box-sizing  : border-box;
 }
 
 ::placeholder {
@@ -70,14 +71,15 @@ p.detail__des {
 
 button.form__box--button {
     background-color: #70CBCE;
-    color: white;
-    font-size: 19px;
-    text-transform: uppercase;
-    border: 0;
-    border-radius: 5px;
-    width: 207px;
-    height: 55px;
-    margin: 10px;
+    color           : white;
+    font-size       : 19px;
+    text-transform  : uppercase;
+    border          : 0;
+    border-radius   : 5px;
+    width           : 207px;
+    height          : 50px;
+    margin          : 10px;
+    cursor          : pointer;
 }
 
 @media screen and (min-width: 327px) and (max-width:514px) {
@@ -94,9 +96,9 @@ button.form__box--button {
         width: 100%;
     }
     button.form__box--button {
-        font-size: 10px;
-        width: 109px;
-        height: 29px;
-        margin: 5px;
+        font-size   : 10px;
+        width       : 109px;
+        height      : 29px;
+        margin      : 5px;
     }
 }

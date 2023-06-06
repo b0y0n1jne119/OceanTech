@@ -30,24 +30,48 @@ const handleClose = () => {
 const handleSubmit = () => {
     submitLogin.innerText = "Loading ..."
     if (
-        !pass.value.trim() ||
+        !pass.value.trim() &&
         !user.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
-            $('.warning__passInput').innerText = " Bạn chưa nhập tên tài khoản hoặc mật khẩu!"
+            $('.warning__passInput').innerText = "Bạn chưa nhập tên tài khoản và mật khẩu!"
+            user.value = ''
+            pass.value = ''
             submitLogin.innerText = 'Login'
         }, 1000)
-    } else if (
+    }
+    else if (!user.value.trim()) {
+        setTimeout(() => {
+            $('.warning__nameInput').classList.remove('hide')
+            $('.warning__passInput').classList.add('hide')
+            $('.warning__nameInput').innerText = "Bạn chưa nhập Username!"
+            submitLogin.innerText = 'Login'
+        }, 1000)
+    }
+
+    else if (!pass.value.trim()) {
+        setTimeout(() => {
+            $('.warning__passInput').classList.remove('hide')
+            $('.warning__nameInput').classList.add('hide')
+            $('.warning__passInput').innerText = "Bạn chưa nhập Password!"
+            submitLogin.innerText = 'Login'
+        }, 1000)
+    }
+
+    else if (
         pass.value.trim() !== account.password ||
         user.value.trim() !== account.user
     ) {
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
             $('.warning__passInput').innerText = "Tên người dùng hoặc mật khẩu không chính xác!"
+            $('.warning__nameInput').classList.add('hide')
+            pass.value = ''
             submitLogin.innerText = 'Login'
         }, 1000)
-    } else if (
+    }
+    else if (
         user.value.trim() === account.user &&
         pass.value.trim() === account.password
     ) {
@@ -114,6 +138,7 @@ const handleSaveNewPass = () => {
             $('.warning__checkPass').classList.remove('hide')
             $('.warning__checkPass').innerText = "Mật khẩu cũ không khớp"
             passOld.value = ''
+            passNew.value = ''
             submitChangePass.innerText = `Save`
         }, 1000)
     } else if (
@@ -130,7 +155,8 @@ const handleSaveNewPass = () => {
     } else {
         $('.warning__checkPass').classList.add('hide')
         $('.warning__checkPass').innerText = ''
-        account = passNew.value.trim()
+        account.password = passNew.value.trim()
+        console.log(account);
         $('.warning__submitPass').classList.remove('hide')
 
         setTimeout(() => {
@@ -144,6 +170,10 @@ const handleSaveNewPass = () => {
             formLogin.classList.remove('hide')
             submitChangePass.innerText = 'Save'
             user.focus()
+            user.value = ''
+            pass.value = ''
+            $('.warning__passInput').classList.add('hide')
+            $('.warning__nameInput').classList.add('hide')
             $('.warning__checkPass').classList.add('hide')
         }, 1500)
     }

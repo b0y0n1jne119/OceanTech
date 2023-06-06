@@ -2,33 +2,35 @@ html {
     font-size: 100%;
 }
 .container {
-    display: block;
-    background-color: #f2f3f5;
-    font-family: Arial, Helvetica, sans-serif;
+    display         : block;
+    background-color: #F2F3F5;
+    font-family     : Arial, Helvetica, sans-serif;
+    width           : 800px;
+    margin          : auto;
 }
 .row {
-    display: flex;  
-    padding: 2rem;
-    border-bottom: 1px dashed #f27e76;
+    display         : flex;  
+    padding         : 2rem;
+    border-bottom   : 1px dashed #f27e76;
 }
 .row:last-child {
     border-bottom: none;
 }
 
 .content p {
-    color:#b6b7b8;
+    color: #b6b7b8;
 }
 .avatar {
-    display: block;
-    font-size: 100px;
+    display         : block;
+    font-size       : 100px;
     background-color: #d997de;
-    border-radius: 10px;
-    color:white;
-    font-weight: 100;
-    padding:0 2rem;
-    margin:1rem;
-    max-height: 133px;
-    max-width: 133px;
+    border-radius   : 7px;
+    color           : white;
+    font-weight     : 100;
+    padding         : 0 1rem;
+    margin          : 1rem;
+    max-height      : 133px;
+    max-width       : 133px;
 }
 h3 {
     text-transform: uppercase;
@@ -38,10 +40,9 @@ h3 {
         display: block;
     }
     .avatar {
-        justify-content: center;
-        padding:0;
-        text-align: center;
-        margin:0 auto;
+        justify-content : center;
+        padding         : 0;
+        text-align      : center;
+        margin          : 0 auto;
     }
-    
 }
