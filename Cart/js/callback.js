@@ -25,6 +25,11 @@ const app = (function () {
         return data
     }
 
+    // const getDataAPI = async (url) => {
+    //     const res = await fetch(url)
+    //     const data = await res.json()
+    //     return data
+    // }
     const getDataAPI = (url, callback) => {
         fetch(url)
             .then(response => response.json())
@@ -48,6 +53,7 @@ const app = (function () {
     const deleteDataAPI = (url, callback) => {
         let options = {
             method: "DELETE",
+
             headers: {
                 "Content-Type": "application/json",
             },

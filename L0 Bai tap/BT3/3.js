@@ -24,22 +24,25 @@ const btnLogin = () => {
 const handleClose = () => {
     formLogin.style.transform = `translateY(-120%)`
     $('.btn__login').classList.remove('hide')
+    $('.warning__passInput').classList.add('hide')
+    $('.warning__nameInput').classList.add('hide')
+    $('.warning__checkPass').classList.add('hide')
 }
 
 
 const handleSubmit = () => {
-    submitLogin.innerText = "Loading ..."
+    // submitLogin.innerText = "Loading ..."
     if (
         !pass.value.trim() &&
         !user.value.trim()
     ) {
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
-            $('.warning__passInput').innerText = "Bạn chưa nhập tên tài khoản và mật khẩu!"
+            $('.warning__passInput').innerText = "Chưa nhập tài khoản / Mật khẩu hoặc cả 2 hai"
             user.value = ''
             pass.value = ''
             submitLogin.innerText = 'Login'
-        }, 1000)
+        }, 500)
     }
     else if (!user.value.trim()) {
         setTimeout(() => {
@@ -47,7 +50,7 @@ const handleSubmit = () => {
             $('.warning__passInput').classList.add('hide')
             $('.warning__nameInput').innerText = "Bạn chưa nhập Username!"
             submitLogin.innerText = 'Login'
-        }, 1000)
+        }, 500)
     }
 
     else if (!pass.value.trim()) {
@@ -56,13 +59,14 @@ const handleSubmit = () => {
             $('.warning__nameInput').classList.add('hide')
             $('.warning__passInput').innerText = "Bạn chưa nhập Password!"
             submitLogin.innerText = 'Login'
-        }, 1000)
+        }, 500)
     }
 
     else if (
         pass.value.trim() !== account.password ||
         user.value.trim() !== account.user
     ) {
+        submitLogin.innerText = "Loading ..."
         setTimeout(() => {
             $('.warning__passInput').classList.remove('hide')
             $('.warning__passInput').innerText = "Tên người dùng hoặc mật khẩu không chính xác!"
@@ -75,12 +79,13 @@ const handleSubmit = () => {
         user.value.trim() === account.user &&
         pass.value.trim() === account.password
     ) {
+        submitLogin.innerText = "Loading ..."
         setTimeout(() => {
             $('.warning__passInput').classList.add('hide')
             submitLogin.innerText = "Login"
             formLogin.style.transform = `translateY(-120%)`
             $('.btn__login').classList.remove('hide')
-            $('.btn__login').innerText = 'Đăng nhâp thành công!'
+            $('.btn__login').innerText = 'Đăng nhập thành công!'
             pass.value = ''
             user.value = ''
         }, 1000)
@@ -91,7 +96,7 @@ const btnBackToLogin = () => {
     setTimeout(() => {
         formChangePass.classList.add('hide')
         formLogin.classList.remove('hide')
-    }, 500)
+    }, 1000)
 }
 
 const openFormChangePass = () => {
@@ -99,7 +104,7 @@ const openFormChangePass = () => {
         formLogin.classList.add('hide')
         formChangePass.classList.remove('hide')
         passOld.focus()
-    }, 500)
+    }, 1000)
 }
 
 const handleSaveNewPass = () => {
@@ -156,7 +161,6 @@ const handleSaveNewPass = () => {
         $('.warning__checkPass').classList.add('hide')
         $('.warning__checkPass').innerText = ''
         account.password = passNew.value.trim()
-        console.log(account);
         $('.warning__submitPass').classList.remove('hide')
 
         setTimeout(() => {
@@ -175,6 +179,7 @@ const handleSaveNewPass = () => {
             $('.warning__passInput').classList.add('hide')
             $('.warning__nameInput').classList.add('hide')
             $('.warning__checkPass').classList.add('hide')
+            $('.warning__submitPass').classList.add('hide')
         }, 1500)
     }
 }

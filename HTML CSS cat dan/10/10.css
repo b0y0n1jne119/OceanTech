@@ -1,6 +1,7 @@
 html {
     font-size: 100%;
 }
+
 .container {
     display         : block;
     background-color: #F2F3F5;
@@ -8,11 +9,13 @@ html {
     width           : 800px;
     margin          : auto;
 }
+
 .row {
     display         : flex;  
     padding         : 2rem;
     border-bottom   : 1px dashed #f27e76;
 }
+
 .row:last-child {
     border-bottom: none;
 }
@@ -20,21 +23,25 @@ html {
 .content p {
     color: #b6b7b8;
 }
+
 .avatar {
     display         : block;
-    font-size       : 100px;
-    background-color: #d997de;
+    font-size       : 110px;
+    background-color: #D997DE;
     border-radius   : 7px;
     color           : white;
     font-weight     : 100;
     padding         : 0 1rem;
     margin          : 1rem;
-    max-height      : 133px;
-    max-width       : 133px;
+    height          : 120px;
+    width           : 200px;
+    text-align      : center;
 }
+
 h3 {
     text-transform: uppercase;
 }
+
 @media screen and (max-width: 600px) {
     .row {
         display: block;
@@ -44,5 +51,6 @@ h3 {
         padding         : 0;
         text-align      : center;
         margin          : 0 auto;
+        width           : 140px;
     }
 }

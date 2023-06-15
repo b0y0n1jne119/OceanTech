@@ -2,10 +2,10 @@
   "DANHSACHDONHANG": [
     {
       "idUser": 635,
-      "fullName": "Nguyễn Minh Đức",
-      "address": "P3A1 TT Trần Quốc Toản, Hàng Bài, Hoàn Kiếm, TP Ha Nội",
-      "email": "nguyenminhduc119@gmail.com",
-      "phone": "0337099460",
+      "fullName": "qw as",
+      "address": "33 Xã Yên Mỹ Huyện Lạng Giang Tỉnh Bắc Giang",
+      "email": "asf@g.com",
+      "phone": "0958275991",
       "buyTime": "6-4-2023",
       "itemNumber": 1,
       "totalQuantity": 2,
@@ -20,8 +20,8 @@
     },
     {
       "idUser": 135,
-      "fullName": "Nguyễn Thế Dũng",
-      "address": "Ngõ số 8 Trần Quốc Toản, Hàng Bài, Hoàn Kiếm, TP Hà Nội",
+      "fullName": "aaa aa",
+      "address": "ss 55 Phường Trần Hưng Đạo Thành phố Hạ Long Tỉnh Quảng Ninh",
       "email": "ffasd@gmail.com",
       "phone": "0987654321",
       "buyTime": "11-4-2023",
@@ -42,7 +42,7 @@
     },
     {
       "idUser": 197,
-      "fullName": "Đỗ Minh Tuấn",
+      "fullName": "aaff afg",
       "address": "22 Phường Bắc Sơn Thành phố Uông Bí Tỉnh Quảng Ninh",
       "email": "aga@g.com",
       "phone": "0987654321",
@@ -68,7 +68,7 @@
     },
     {
       "idUser": 424,
-      "fullName": "Đỗ Trọng Nam",
+      "fullName": "cjk kch",
       "address": "22 Phường Trà Cổ Thành phố Móng Cái Tỉnh Quảng Ninh",
       "email": "cjo22@jd.com",
       "phone": "0987654321",
@@ -105,28 +105,6 @@
         }
       ],
       "id": 8
-    },
-    {
-      "idUser": 855,
-      "fullName": "NVJ GG",
-      "address": "11 fa Phường Cẩm Đông Thành phố Cẩm Phả Tỉnh Quảng Ninh",
-      "email": "abc11@gmail.com",
-      "phone": "0987654321",
-      "buyTime": "23-5-2023",
-      "itemNumber": 2,
-      "totalQuantity": 4,
-      "totalPrice": 15200000,
-      "cart": [
-        {
-          "idSP": 2,
-          "soLuong": 3
-        },
-        {
-          "idSP": 3,
-          "soLuong": 1
-        }
-      ],
-      "id": 9
     }
   ]
 }

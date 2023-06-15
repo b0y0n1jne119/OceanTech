@@ -5,7 +5,6 @@ function checkUpLoadData(key) {
 }
 
 if (checkUpLoadData(app.keyLocalStorageListSP)) {
-    console.log((app.keyLocalStorageListSP))
     app.upLoadDataToLocalStorage(app.keyLocalStorageListSP, listData)
 }
 
@@ -24,7 +23,7 @@ function showNumberItemCart() {
     let data = app.getDataFromLocalStorage(app.keyLocalStorageItemCart)
     if (data.length > 0) {
         let number = data.reduce((a, b) => a + b.soLuong, 0)
-        $('.show-item-cart').innerHTML = number
+        $('.show-item-cart').innerHTML = data.length
     } else {
         $('.show-item-cart').innerHTML = ''
     }
