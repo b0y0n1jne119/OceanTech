@@ -25,17 +25,18 @@ const app = (function () {
         return data
     }
 
-    // const getDataAPI = async (url) => {
-    //     const res = await fetch(url)
-    //     const data = await res.json()
-    //     return data
-    // }
-    const getDataAPI = (url, callback) => {
-        fetch(url)
-            .then(response => response.json())
-            .then(callback)
-            .catch(() => { alert(`Không thể lấy dữ liệu`) })
+    const getDataAPI = async (url) => {
+        const res = await fetch(url)
+        const data = await res.json()
+        return data
     }
+
+    // const getDataAPI = (url, callback) => {
+    //     fetch(url)
+    //         .then(response => response.json())
+    //         .then(callback)
+    //         .catch(() => { alert(`Không thể lấy dữ liệu`) })
+    // }
 
     const postDataAPI = (url, data, callback) => {
         let options = {

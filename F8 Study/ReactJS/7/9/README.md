@@ -1,5 +1,8 @@
 # Video 60: useEffect with preview avatar
 
+1. Callback luôn được gọi sau khi component mounted
+2. Cleanup func luôn được gọi trước khi component unmounted
+3. Cleanup func luôn đc gọi trước khi callback được gọi
 
 ### Ví dụ 1:
 
