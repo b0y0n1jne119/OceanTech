@@ -1,6 +1,14 @@
 const listBillsAPI = 'http://localhost:3000/DANHSACHDONHANG'
 
-app.getDataAPI(listBillsAPI, renderBills)
+// app.getDataAPI(listBillsAPI, renderBills)
+const getDataAPI = async (url) => {
+    const res = await fetch(url)
+    const data = await res.json()
+    return data
+}
+
+const billData = getDataAPI('http://localhost:3000/DANHSACHDONHANG')
+billData.then(data => renderBills(data))
 
 function showOrHideDetailList(event) {
     let check = event.target.parentElement.childNodes[3].style.display
