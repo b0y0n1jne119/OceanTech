@@ -3,7 +3,7 @@ import Content from './Content';
 
 export default function App() {
 
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(true)
 
   return (
     <div style={{ padding: 32 }}>

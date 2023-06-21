@@ -1,4 +1,4 @@
-# Video 60: useEffect with preview avatar
+# Video 61: useEffect with fake Chat App
 
 1. Callback luôn được gọi sau khi component mounted
 2. Cleanup func luôn được gọi trước khi component unmounted
