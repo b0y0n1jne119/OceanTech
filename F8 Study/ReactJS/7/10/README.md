@@ -6,38 +6,78 @@
 
 ### Ví dụ 1:
 
+1. index.js
+
+...
+
+// Fake comments
+function emitComment(id) {
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`, {
+        detail: `Nội dung comment của lesson ${id}`
+      })
+    )
+  }, 2000)
+}
+
+emitComment(1)
+emitComment(2)
+emitComment(3)
+
+...
+
+
+2. Content.js
+
 import { useEffect, useState } from "react"
 
+const lessons = [
+    {
+        id: 1,
+        name: "ReactJS la gì, tại sao nên học ReactJS"
+    },
+    {
+        id: 2,
+        name: "Đó là sự lựa chọn của Steins;Gate"
+    },
+    {
+        id: 3,
+        name: "Steins;Gate 0"
+    },
+]
 
 export default function Content() {
 
-    const [avatar, setAvatar] = useState()
+    const [lessonId, setLessonId] = useState(1)    
 
     useEffect(() => {
-        // Cleanup
-        return () => {
-            avatar && URL.revokeObjectURL(avatar.preview)
+        const handleComment = ({detail}) => {
+            console.log(detail);
         }
-    }, [avatar])
 
-    const handlePreviewAvatar = (e) => {
-        const file = e.target.files[0]
+        window.addEventListener(`lesson-${lessonId}`, handleComment)
 
-        file.preview = URL.createObjectURL(file)
-        setAvatar(file)
-    }
+        return () => {
+            window.removeEventListener(`lesson-${lessonId}`, handleComment)
+        }
+    }, [lessonId])
 
     return (
-        <>
-            <input
-                type="file"
-                onChange={handlePreviewAvatar}
-            />
-            {avatar && (
-                <div>
-                    <img src={avatar.preview} alt="" width="50%" />
-                </div>
-            )}
-        </>
+        <div>
+            <ul>
+                {lessons.map(lesson => (
+                    <li
+                        key={lesson.id}
+                        style={{
+                            color: lessonId === lesson.id ? 'red' : '#333'
+                        }}
+                        onClick={() => setLessonId(lesson.id)}
+                    >
+                        {lesson.name}
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
