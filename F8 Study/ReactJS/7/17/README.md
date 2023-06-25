@@ -1,3 +1,10 @@
+# Video 74: Todo App with useReducer hook
+
+
+### Ví dụ 1:
+
+  # App.js
+
 import { useReducer, useRef } from 'react'
 // import Content from './Content';
 
