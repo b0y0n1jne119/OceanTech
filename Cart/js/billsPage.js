@@ -1,49 +1,56 @@
 const listBillsAPI = 'http://localhost:3000/DANHSACHDONHANG'
 
-// app.getDataAPI(listBillsAPI, renderBills)
-const getDataAPI = async (url) => {
-    const res = await fetch(url)
-    const data = await res.json()
-    return data
-}
-
-const billData = getDataAPI('http://localhost:3000/DANHSACHDONHANG')
-billData.then(data => renderBills(data))
+app.getDataAPI(listBillsAPI, renderBills)
 
 function showOrHideDetailList(event) {
     let check = event.target.parentElement.childNodes[3].style.display
-    if (check === 'none' || check === '') { event.target.parentElement.childNodes[3].style.display = 'block' }
-    else event.target.parentElement.childNodes[3].style.display = 'none'
-}
-
-function removeBill(id) {
-    if (confirm("Bạn chắc có muốn xóa hóa đơn này không?")) {
-        fetch(listBillsAPI)
-            .then(response => response.json())
-            .then(data => data.find(b => b.idUser === id))
-            .then(customer => {
-                let url = listBillsAPI + '/' + customer.id
-
-                app.deleteDataAPI(url)
-                rePayBillToLocal(customer.cart)
-            })
+    if (check === 'none' || check === '') { 
+        event.target.parentElement.childNodes[3].style.display = 'block'
+        $('.detail-content').classList.add('content-open')
+        $('.detail-content').classList.remove('content-close')
     }
-}
-
-function editCustomer(edit, callback) {
-    let url = listBillsAPI + '/' + '1'
-    let options = {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(edit),
+    else {
+        
+        $('.detail-content').classList.remove('content-open')
+        $('.detail-content').classList.add('content-close')
+        event.target.parentElement.childNodes[3].style.display = 'none'
     }
-    fetch(url, options)
-        .then(response => response.json())
-        .then(callback)
+
 }
 
+async function removeBill(id) {
+    if (window.confirm("Bạn chắc có muốn xóa hóa đơn này không?")) {
+      const response = await fetch(listBillsAPI);
+      const data = await response.json();
+      const customer = data.find(b => b.idUser === id);
+  
+      const url = listBillsAPI + '/' + customer.id;
+  
+      await app.deleteDataAPI(url);
+      await rePayBillToLocal(customer.cart);
+    }
+  }
+
+async function editCustomer(edit) {
+    const url = listBillsAPI + '/' + '1'
+    const options = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(edit),
+    }
+  
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
+      return data.data;
+    } catch (error) {
+      console.error("Error: ", error);
+      return "Error";
+    }
+  }
+  
 function rePayBillToLocal(payBack) {
     let data = app.getDataFromLocalStorage(app.keyLocalStorageListSP)
     payBack.forEach(a => {

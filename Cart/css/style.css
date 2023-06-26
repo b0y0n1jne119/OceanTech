@@ -168,12 +168,20 @@ li.nav-title i:hover {
     color           : #dc3545;
     text-decoration : none;
 }
+
+.back-button:hover {
+    background-color: #eed9d9;
+}
+
 .buy-button {
     color           : #fff;
     background-color: #198754;
     border-radius   : 7px;
     padding         : 5px 15px;
     cursor          : pointer;
+}
+.buy-button:hover {
+    background-color: #25b975;
 }
 
 .total {
@@ -185,6 +193,11 @@ li.nav-title i:hover {
     font-size   : 1.5rem;
     cursor      : pointer;
 }
+
+.clear-item-cart:hover {
+    color       : #bf8086
+}
+
 .quantity-adjust {
     display         : inline-flex;
     justify-content : space-around;
@@ -267,6 +280,11 @@ sup {
     border-top  : 1px solid #ccc;
     padding     : 1% 0;
 }
+
+.list-bills-render i:hover {
+    color: #bf8086;
+}
+
 .list-bills-render i {
     font-size   : 1.5rem;
     cursor      : pointer;
@@ -322,6 +340,15 @@ h4.item-title {
     }
 }
 
-.detail-content {
+/* .detail-content {
+    animation: fade-down 0.5s;
+    animation: fade-down 0.5s;
+} */
+
+.content-open {
+    animation: fade-down 0.5s;
+}
+
+.content-close {
     animation: fade-up 0.5s;
 }

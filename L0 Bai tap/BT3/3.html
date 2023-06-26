@@ -18,13 +18,13 @@
         <div class="wrap">
             <span onclick="handleClose()" class="close"><i class="fa-solid fa-xmark"></i></span>
             <h1 class="header">MEMBER LOGIN</h1>
-            <div class="formLogin__box">
+            <div class="formLogin__box formUser">
                 <span class="formLogin__icon"><i class="fa-solid fa-user"></i></span>
-                <input type="text" class="formLogin__nameInput" name="username" id="username" placeholder="Username" />
+                <input type="text" class="formLogin__nameInput" name="username" id="username" placeholder="Username"/>
             </div>
             <span class="warning__nameInput hide"></span>
 
-            <div class="formLogin__box">
+            <div class="formLogin__box formPass">
                 <span class="formLogin__icon"><i class="fa-solid fa-lock"></i></span>
                 <input type="password" class="formLogin__passInput" name="password" id="password"
                     placeholder="Password">
@@ -39,12 +39,12 @@
     <form action="#" class="formChangeP hide">
         <div class="wrap">
             <h1 class="header">CHANGE YOUR PASSWORD</h1>
-            <div class="formChangeP__box">
+            <div class="formChangeP__box formPassOld">
                 <span class="formLogin__icon"><i class="fa-solid fa-lock"></i></span>
                 <input type="password" class="formChangeP__oldPass" name="password-old" id="password-old"
                     placeholder="Old Password" onclick="handleResetWarning()">
             </div>
-            <div class="formChangeP__box">
+            <div class="formChangeP__box formPassNew">
                 <span class="formLogin__icon"><i class="fa-solid fa-lock"></i></span>
                 <input type="password" class="formChangeP__newPass" placeholder="New Password">
             </div>

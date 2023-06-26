@@ -23,7 +23,7 @@ function renderBills(data) {
 function createDetailListHTML(data) {
     let html = `
         
-    <div class="detail-content">
+    <div class="detail-content content-close">
         <div class="row bill-detail-header">
             <div class="col">STT</div>
             <div class="col-3">Name</div>

@@ -27,6 +27,11 @@ const handleClose = () => {
     $('.warning__passInput').classList.add('hide')
     $('.warning__nameInput').classList.add('hide')
     $('.warning__checkPass').classList.add('hide')
+    $('.formUser').classList.remove('formUser__error')
+    $('.formPass').classList.remove('formPass__error')
+    $('.formLogin__box').classList.remove('mb-0')
+    $('.formPassOld').classList.remove('formPassOld__error')
+    $('.formPassNew').classList.remove('formPassNew__error')
 }
 
 
@@ -42,6 +47,8 @@ const handleSubmit = () => {
             user.value = ''
             pass.value = ''
             submitLogin.innerText = 'Login'
+            $('.formUser').classList.add('formUser__error')
+            $('.formPass').classList.add('formPass__error')
         }, 500)
     }
     else if (!user.value.trim()) {
@@ -49,7 +56,10 @@ const handleSubmit = () => {
             $('.warning__nameInput').classList.remove('hide')
             $('.warning__passInput').classList.add('hide')
             $('.warning__nameInput').innerText = "Bạn chưa nhập Username!"
-            submitLogin.innerText = 'Login'
+            $('.formUser').classList.add('formUser__error')
+            $('.formPass').classList.remove('formPass__error')
+            $('.formLogin__box').classList.add('mb-0')
+            submitLogin.innerText = 'Login'    
         }, 500)
     }
 
@@ -58,6 +68,9 @@ const handleSubmit = () => {
             $('.warning__passInput').classList.remove('hide')
             $('.warning__nameInput').classList.add('hide')
             $('.warning__passInput').innerText = "Bạn chưa nhập Password!"
+            $('.formUser').classList.remove('formUser__error')
+            $('.formPass').classList.add('formPass__error')
+            $('.formLogin__box').classList.remove('mb-0')
             submitLogin.innerText = 'Login'
         }, 500)
     }
@@ -71,6 +84,9 @@ const handleSubmit = () => {
             $('.warning__passInput').classList.remove('hide')
             $('.warning__passInput').innerText = "Tên người dùng hoặc mật khẩu không chính xác!"
             $('.warning__nameInput').classList.add('hide')
+            $('.formUser').classList.remove('formUser__error')
+            $('.formPass').classList.remove('formPass__error')
+            $('.formLogin__box').classList.remove('mb-0')
             pass.value = ''
             submitLogin.innerText = 'Login'
         }, 1000)
@@ -82,10 +98,15 @@ const handleSubmit = () => {
         submitLogin.innerText = "Loading ..."
         setTimeout(() => {
             $('.warning__passInput').classList.add('hide')
-            submitLogin.innerText = "Login"
-            formLogin.style.transform = `translateY(-120%)`
             $('.btn__login').classList.remove('hide')
             $('.btn__login').innerText = 'Đăng nhập thành công!'
+            $('.formUser').classList.remove('formUser__error')
+            $('.formPass').classList.remove('formPass__error')
+            $('.formLogin__box').classList.remove('mb-0')
+            $('.formPassOld').classList.remove('formPassOld__error')
+            $('.formPassNew').classList.remove('formPassNew__error')
+            submitLogin.innerText = "Login"
+            formLogin.style.transform = `translateY(-120%)`
             pass.value = ''
             user.value = ''
         }, 1000)
@@ -116,6 +137,8 @@ const handleSaveNewPass = () => {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
             $('.warning__checkPass').innerText = 'Bạn chưa nhập mật khẩu'
+            $('.formPassOld').classList.add('formPassOld__error')
+            $('.formPassNew').classList.add('formPassNew__error')
             submitChangePass.innerText = `Save`
         }, 1000)
     } else if (
@@ -124,6 +147,8 @@ const handleSaveNewPass = () => {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
             $('.warning__checkPass').innerText = 'Bạn chưa nhập mật khẩu cũ!'
+            $('.formPassOld').classList.add('formPassOld__error')
+            $('.formPassNew').classList.remove('formPassNew__error')
             passOld.value = ''
             passNew.value = ''
             submitChangePass.innerText = `Save`
@@ -134,6 +159,8 @@ const handleSaveNewPass = () => {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
             $('.warning__checkPass').innerText = 'Vui lòng nhập mật khẩu mới!'
+            $('.formPassOld').classList.remove('formPassOld__error')
+            $('.formPassNew').classList.add('formPassNew__error')
             submitChangePass.innerText = `Save`
         }, 1000)
     } else if (
@@ -142,6 +169,8 @@ const handleSaveNewPass = () => {
         setTimeout(() => {
             $('.warning__checkPass').classList.remove('hide')
             $('.warning__checkPass').innerText = "Mật khẩu cũ không khớp"
+            $('.formPassOld').classList.remove('formPassOld__error')
+            $('.formPassNew').classList.remove('formPassNew__error')
             passOld.value = ''
             passNew.value = ''
             submitChangePass.innerText = `Save`
@@ -180,6 +209,12 @@ const handleSaveNewPass = () => {
             $('.warning__nameInput').classList.add('hide')
             $('.warning__checkPass').classList.add('hide')
             $('.warning__submitPass').classList.add('hide')
+            $('.formUser').classList.remove('formUser__error')
+            $('.formPass').classList.remove('formPass__error')
+            $('.formLogin__box').classList.remove('mb-0')
+            $('.formPassOld').classList.remove('formPassOld__error')
+            $('.formPassNew').classList.remove('formPassNew__error')
+            $('.formLogin__box').classList.remove('mb-0')
         }, 1500)
     }
 }

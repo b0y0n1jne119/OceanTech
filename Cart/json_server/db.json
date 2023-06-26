@@ -105,6 +105,28 @@
         }
       ],
       "id": 8
+    },
+    {
+      "idUser": 855,
+      "fullName": "NVJ GG",
+      "address": "11 fa Phường Cẩm Đông Thành phố Cẩm Phả Tỉnh Quảng Ninh",
+      "email": "abc11@gmail.com",
+      "phone": "0987654321",
+      "buyTime": "23-5-2023",
+      "itemNumber": 2,
+      "totalQuantity": 4,
+      "totalPrice": 15200000,
+      "cart": [
+        {
+          "idSP": 2,
+          "soLuong": 3
+        },
+        {
+          "idSP": 3,
+          "soLuong": 1
+        }
+      ],
+      "id": 9
     }
   ]
 }

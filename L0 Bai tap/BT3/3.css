@@ -131,3 +131,14 @@ body {
 .hide {
     display: none;
 }
+
+.formUser__error,
+.formPass__error,
+.formPassOld__error,
+.formPassNew__error {
+    border: 1px solid red;
+}
+
+.mb-0 {
+    margin-bottom: 5px;
+}
